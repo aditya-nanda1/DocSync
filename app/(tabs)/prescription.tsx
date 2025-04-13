@@ -19,7 +19,7 @@ export default function Prescription() {
       <View style={styles.actionContainer}>
         <TouchableOpacity 
           style={styles.actionButton}
-          onPress={() => router.push('/prescription/scanner')}>
+          onPress={() => router.push('/utils/scanner')}>
           <View style={[styles.iconContainer, { backgroundColor: '#ebf8ff' }]}>
             <QrCode size={32} color="#3498db" />
           </View>
@@ -29,7 +29,7 @@ export default function Prescription() {
 
         <TouchableOpacity 
           style={styles.actionButton}
-          onPress={() => router.push('/prescription/new')}>
+          onPress={() => router.push('/utils/new')}>
           <View style={[styles.iconContainer, { backgroundColor: '#e6fffa' }]}>
             <FilePlus size={32} color="#38b2ac" />
           </View>
@@ -57,7 +57,8 @@ export default function Prescription() {
         ))}
       </View>
 
-      <TouchableOpacity style={styles.chatbotButton}>
+      <TouchableOpacity style={styles.chatbotButton}
+      onPress={() => router.push('/utils/chatbot')}>
         <MessageCircle size={24} color="#fff" />
       </TouchableOpacity>
     </ScrollView>
